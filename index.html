@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rikkei Coffee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">Rikkei Coffee</div>
+
+            <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Mở menu" aria-expanded="false"
+                aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="nav-menu" aria-label="Điều hướng chính">
+                <ul>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Thực đơn</a></li>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro" aria-labelledby="intro-title">
+            <div class="container">
+                <h1 id="intro-title">Câu chuyện của Rikkei Coffee</h1>
+                <p>Từ một quầy nhỏ gần trường đại học, chúng tôi vẫn rang cà phê theo từng mẻ nhỏ.</p>
+            </div>
+        </section>
+
+        <section class="values" aria-labelledby="values-title">
+            <div class="container">
+                <h2 id="values-title">Giá trị chúng tôi theo đuổi</h2>
+                <ul class="values-list">
+                    <li>
+                        <h3>Hạt chọn kỹ</h3>
+                        <p>Hạt cà phê được tuyển từ các vùng trồng ở Tây Nguyên.</p>
+                    </li>
+                    <li>
+                        <h3>Rang theo mẻ nhỏ</h3>
+                        <p>Mỗi mẻ rang vừa đủ dùng trong ngày để giữ trọn hương vị.</p>
+                    </li>
+                    <li>
+                        <h3>Pha tại chỗ</h3>
+                        <p>Khách nhìn thấy ly cà phê của mình được pha ngay tại quầy.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Địa chỉ: 21 Phố Mẫu, Quận Cầu Giấy, Hà Nội</p>
+        <p>2026 Rikkei Coffee. Dữ liệu giả dùng cho học tập.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', function () {
+            const isOpen = navMenu.classList.toggle('is-open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+    </script>
+</body>
+
+</html>
